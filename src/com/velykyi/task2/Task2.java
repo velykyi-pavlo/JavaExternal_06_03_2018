@@ -4,40 +4,33 @@ import java.util.Arrays;
 
 public class Task2 {
     public static void main(String[] args) {
-        int[][] array = {{1, 2, 3, 5}
-                        ,{0, 4, 2, 3}
-                        ,{10, 13, 5, 6}};
-        for (int[] a :
-                array) {
-            System.out.println(Arrays.toString(a));
-        }
+        int[][] matrix = {{1, 2, 3, 5}
+                , {0, 4, 2, 3}
+                , {10, 13, 5, 6}};
 
-        double[] arrayAverageByColum = getArrayAverageByColum(array);
+        double[] arrayAverageByColum = getArrayAverageByColum(matrix);
 
-        System.out.println(Arrays.toString(arrayAverageByColum));
-        // modified sorting, which takes an array in the form of which
+        // modified sorting, which takes an matrix in the form of which
         // will be sorted columns in the matrix
         Quicksort quicksort = new Quicksort();
 
-        quicksort.sort(arrayAverageByColum, array);
-
-        System.out.println(Arrays.toString(arrayAverageByColum));
+        quicksort.sort(arrayAverageByColum, matrix);
 
         for (int[] a :
-                array) {
+                matrix) {
             System.out.println(Arrays.toString(a));
         }
     }
 
 
-    private static double[] getArrayAverageByColum(int[][] array) {
+    private static double[] getArrayAverageByColum(int[][] matrix) {
         double[] arrayAverageByColum = new double[4];
         double sum = 0.0;
         for (int j = 0; j < 4; j++) {
-            for (int i = 0; i < array.length; i++) {
-              sum+= array[i][j];
+            for (int i = 0; i < matrix.length; i++) {
+                sum += matrix[i][j];
             }
-            arrayAverageByColum[j] = sum / array.length;
+            arrayAverageByColum[j] = sum / matrix.length;
             sum = 0;
         }
         return arrayAverageByColum;
@@ -45,45 +38,41 @@ public class Task2 {
 
 }
 
-class Quicksort  {
+class Quicksort {
     private double[] numbers;
     private int number;
-    private int[][] arrays;
+    private int[][] matrix;
 
-    public void sort(double[] values, int[][] arrays) {
+    public void sort(double[] values, int[][] matrix) {
 
-        if (values ==null || values.length==0){
+        if (values == null || values.length == 0) {
             return;
         }
-        if (arrays ==null || arrays.length==0){
+
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return;
         }
+
         this.numbers = values;
-        this.arrays = arrays;
+        this.matrix = matrix;
         number = values.length;
         quicksort(0, number - 1);
     }
 
     private void quicksort(int low, int high) {
         int i = low, j = high;
-
-        double pivot = numbers[low + (high-low)/2];
-
+        double pivot = numbers[low + (high - low) / 2];
 
         while (i <= j) {
-
             while (numbers[i] < pivot) {
                 i++;
             }
-
             while (numbers[j] > pivot) {
                 j--;
             }
-
-
             if (i <= j) {
                 exchange(i, j);
-                swapColumByIndex( i, j);
+                swapColumByIndex(i, j);
                 i++;
                 j--;
             }
@@ -101,12 +90,12 @@ class Quicksort  {
         numbers[j] = temp;
     }
 
-    private  void swapColumByIndex( int i, int j) {
+    private void swapColumByIndex(int i, int j) {
         int temp2 = 0;
-        for (int k = 0; k < this.arrays.length; k++) {
-            temp2 = arrays[k][i];
-            arrays[k][i] = arrays[k][j];
-            arrays[k][j] = temp2;
+        for (int k = 0; k < this.matrix.length; k++) {
+            temp2 = matrix[k][i];
+            matrix[k][i] = matrix[k][j];
+            matrix[k][j] = temp2;
         }
     }
 }
