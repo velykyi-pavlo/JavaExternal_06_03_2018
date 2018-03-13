@@ -12,6 +12,10 @@ public class Task3 {
         List spiral = spiralResult(array);
         System.out.println(spiral);
 
+
+
+
+
     }
 
     public static List spiralResult(int[][] matrix) {
