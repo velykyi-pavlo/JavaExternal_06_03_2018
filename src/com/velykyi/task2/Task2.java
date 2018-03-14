@@ -24,16 +24,16 @@ public class Task2 {
 
 
     private static double[] getArrayAverageByColum(int[][] matrix) {
-        double[] arrayAverageByColum = new double[4];
+        double[] result = new double[matrix[1].length];
         double sum = 0.0;
-        for (int j = 0; j < 4; j++) {
+        for (int j = 0; j < result.length; j++) {
             for (int i = 0; i < matrix.length; i++) {
                 sum += matrix[i][j];
             }
-            arrayAverageByColum[j] = sum / matrix.length;
+            result[j] = sum / matrix.length;
             sum = 0;
         }
-        return arrayAverageByColum;
+        return result;
     }
 
 }

@@ -4,6 +4,8 @@ Using loops and method: System.out.print ("*"), System.out.print (""), System.ou
 # Task2
 Given an integer rectangular matrix.
 2.3 Arrange the columns in descending order.
+#TAsk2_2
+Arrange rows in ascending order by the longest series of the same elements.
 # Task3
 Given a square matrix A of order M (M is an odd number).
 Starting with element A1,1 and moving clockwise, output all its elements in a spiral: the first line, the last column,
