@@ -1,6 +1,7 @@
 package com.velykyi.task5;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Task5 {
 
@@ -8,9 +9,21 @@ public class Task5 {
 
         int[] array = {1, 3, 5, 6, 7, -3, -45, -563, 34, 244, -56, -48, 35, 16,  563, 10000, 0, 0,0 ,-10000};
 
-        Quicksort quicksort = new Quicksort();
-        quicksort.sort(array);
-        System.out.println(Arrays.toString(array));
+
+        List<Integer> list = Arrays.asList(1, 3, 5, 6, 7, -3, -45, -563, 34, 244, -56, -48, 35, 16,  563, 10000, 0, 0,0 ,-10000);
+
+
+        list.sort((i1,i2) -> (((i1 > 0) && (i2 > 0)) ? i2 - i1 :i1 - i2) );
+
+        list.stream()
+                .forEach(System.out::println);
+
+
+
+
+//        Quicksort quicksort = new Quicksort();
+//        quicksort.sort(array);
+//        System.out.println(Arrays.toString(array));
     }
 
 }
