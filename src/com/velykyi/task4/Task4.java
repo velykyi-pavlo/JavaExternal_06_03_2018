@@ -11,7 +11,7 @@ public class Task4 {
         int[] array = {1, 3, 5, 6, 7, -3, -45, -563, 34, 244, -56};
 
         sortWhithSaveingPosition(array);
-
+        // dont save position but faster
 //        quickSort(array);
 
 

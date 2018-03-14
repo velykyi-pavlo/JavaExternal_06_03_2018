@@ -11,3 +11,5 @@ Starting with element A1,1 and moving clockwise, output all its elements in a sp
  The last element of the matrix is derived.
 # Task4
 In a one-dimensional array, first positive then negative for O(n).
+# Task5
+Arrange a one-dimensional array first negative increment then positive in descending order.
