@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Task2_2 {
     public static void main(String[] args) {
-        int[][] matrix = {{1, 2, 3, 3, 3, 5, 5, 5}
-                         ,{0, 4, 2, 2, 6, 1, 5, 5}
-                         ,{9, 5, 5, 6, 5, 5, 5, 5}};
+        int[][] matrix = {{1, 2, 5, 3, 3, 5, 5, 5}
+                         ,{5, 4, 6, 2, 6, 1, 5, 5}
+                         ,{9, 3, 5, 6, 5, 3, 5, 5}};
 
         int[] mostPopulatInRow = getArrayMostPopulatInRow(matrix);
 

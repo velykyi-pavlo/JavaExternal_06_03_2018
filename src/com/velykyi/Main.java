@@ -1,16 +1,33 @@
 package com.velykyi;
 
+import java.util.Arrays;
+
 public class Main {
-    public void f(Integer a){
-        System.out.println( " integer");
+    public  static void work(){
+        try {
+            work();
+        } finally {
+            work();
+        }
     }
-    public void f(Object a){
-        System.out.println( " Object");
+    static {
+        System.out.println(Long.class);
     }
+
 
     public static void main(String[] args) {
 	// write your code here
-        Main main = new Main();
-        main.f(new Double(5));
+     p1:{
+         p2:{
+             p3:{
+                 System.out.println("pe");
+                 if (true) break p2;
+                 System.out.println("h");
+             }
+             System.out.println("i");
+         }
+         System.out.println("hf");
+     }
+//    work();
     }
 }
