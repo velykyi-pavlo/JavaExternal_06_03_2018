@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ExternalCourses.iml" filepath="$PROJECT_DIR$/ExternalCourses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pavlo.iml" filepath="$PROJECT_DIR$/pavlo.iml" />
     </modules>
   </component>
 </project>

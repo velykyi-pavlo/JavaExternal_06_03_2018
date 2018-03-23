@@ -17,3 +17,5 @@ In a one-dimensional array, first positive then negative for O(n).
 Arrange a one-dimensional array first negative increment then positive in descending order.
 # Poligon 
 create poligon with validator for figure
+# Vehicle World
+mvn, inner class, oop principe
